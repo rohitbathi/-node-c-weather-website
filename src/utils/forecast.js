@@ -12,7 +12,7 @@ const forecast=(lat,long,callback)=>{
             if(body.current.weather_descriptions.length===0){
                 body.current.weather_descriptions[0]='unable to determine weather'
             }
-            callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out.It feels like '+body.current.feelslike+' degrees out.')
+            callback(undefined,body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+' degrees out.\nThe humidity outside is '+body.current.humidity+' percent.\nPrecipitation is '+body.current.precip+'percent.\nHave a nice time!\n:-)')
         }
     })
 }
